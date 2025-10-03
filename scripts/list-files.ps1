@@ -1,3 +1,14 @@
+﻿<#
+============================================================
+  Project: Soke
+  File: list-files.ps1
+  Author: Ishura
+
+  This file (list-files.ps1) is part of the Soke project.
+  Â© 2025 Ishura. All rights reserved.
+============================================================
+#>
+
 param(
     [string]$Path = ".",
     [string]$GitIgnorePath = ".gitignore"
@@ -58,3 +69,4 @@ function Show-Tree {
 # Main Execution
 $patterns = Get-GitIgnorePatterns -GitIgnoreFile $GitIgnorePath
 Show-Tree -BasePath (Resolve-Path $Path).Path -IgnorePatterns $patterns
+
